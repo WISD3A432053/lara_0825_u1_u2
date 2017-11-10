@@ -61,11 +61,13 @@ Route::get('/', function () {
     $post->update([
         'is_feature' => '1'
     ]);
-    */
+
 
     $allPosts = \App\Post::all();
     dd($allPosts);
-
+    */
+    $featuredPosts = \App\Post::where('is_feature', 1)->get();
+    dd($featuredPosts);
 
     return view('welcome');
 });
