@@ -12,6 +12,8 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
+        Post::truncate();
+
         foreach(range(1, 20) as $number) {
             Post::create([
                 'title' => 'title '.$number,
