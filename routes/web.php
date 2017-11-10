@@ -30,9 +30,13 @@ Route::get('/', function () {
 
     $posts = \App\Post::all();
     dd($posts);
-*/
+
     $post = \App\Post::find(1);
     dd($post);
+*/
+
+    $posts = \App\Post::where('id', '<', 4)->orderBy('id', 'DESC')->get();
+    dd($posts);
 
     return view('welcome');
 });
