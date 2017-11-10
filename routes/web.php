@@ -17,7 +17,7 @@ Route::get('/', function () {
         'title' => 'test title',
         'content' => 'test content',
     ]);
-    */
+
     $post	=	new	\App\Post();
     $post->title	=	'test	title2';
     $post->content	=	'test	content2';
@@ -30,6 +30,9 @@ Route::get('/', function () {
 
     $posts = \App\Post::all();
     dd($posts);
+*/
+    $post = \App\Post::find(1);
+    dd($post);
 
     return view('welcome');
 });
