@@ -74,10 +74,11 @@ Route::get('/', function () {
 
     $lastPost = \App\Post::orderBy('id', 'DESC')->first();
     dd($lastPost);
-     */
+*/
     $comment	=	new	\App\Comment();
     $comment->title	=	'hello4';
     $comment->content	=	'thank you4';
+    $comment->post_id	=	'4';
     $comment->save();
 
 
