@@ -12,9 +12,16 @@
 */
 
 Route::get('/', function () {
+    /*
     \App\Post::create([
         'title' => 'test title',
         'content' => 'test content',
     ]);
+    */
+    $post	=	new	\App\Post();
+    $post->title	=	'test	title';
+    $post->content	=	'test	content';
+    $post->save();
+
     return view('welcome');
 });
