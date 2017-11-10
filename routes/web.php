@@ -71,9 +71,14 @@ Route::get('/', function () {
 
     $fourthPost = \App\Post::find(4);
     dd($fourthPost);
-    */
+
     $lastPost = \App\Post::orderBy('id', 'DESC')->first();
     dd($lastPost);
+    */
+    $comment	=	new	\App\Comment();
+    $comment->title	=	'hello';
+    $comment->content	=	'thank you';
+    $comment->save();
 
     return view('welcome');
 });
