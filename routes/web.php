@@ -53,8 +53,14 @@ Route::get('/', function () {
     $post->delete();
 
     \App\Post::destroy(2);
-    */
+
     \App\Post::destroy(3, 5, 7);
-    
+    */
+
+    $post = \App\Post::find(4);
+    $post->update([
+        'is_feature' => '1'
+    ]);
+
     return view('welcome');
 });
