@@ -28,5 +28,8 @@ Route::get('/', function () {
     $post->content	=	'thank you3';
     $post->save();
 
+    $posts = \App\Post::all();
+    dd($posts);
+
     return view('welcome');
 });
