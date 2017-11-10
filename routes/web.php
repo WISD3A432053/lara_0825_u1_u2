@@ -55,12 +55,17 @@ Route::get('/', function () {
     \App\Post::destroy(2);
 
     \App\Post::destroy(3, 5, 7);
-    */
+
 
     $post = \App\Post::find(4);
     $post->update([
         'is_feature' => '1'
     ]);
+    */
+
+    $allPosts = \App\Post::all();
+    dd($allPosts);
+
 
     return view('welcome');
 });
